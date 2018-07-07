@@ -1,9 +1,28 @@
 <Calculator>:
     id: calculator
     display: label
+    result: labelResult
     
     BoxLayout:
         orientation: 'vertical'
+        
+        Label:
+            id: labelResult
+            
+            canvas.before: 
+                Color: 
+                    rgb: .13, .17, .18, 1
+                Rectangle: 
+                    pos: self.pos 
+                    size: self.size
+                    
+            halign: 'center'
+            valign: 'center'
+            font_size: 40
+            text_size: 550, None
+            size_hint: 1, .15
+            shorten: True
+            shorten_from: 'right'
 
         Label:
             id: label
@@ -17,10 +36,11 @@
             
             halign: 'right'
             valign: 'center'
-            font_size: 88
-            italic: True
+            font_size: 90
             text_size: 550, None
-            size_hint: 1, .55
+            size_hint: 1, .35
+            shorten: True
+            shorten_from: 'right'
             
         GridLayout:
             cols: 4
@@ -35,151 +55,218 @@
             
             Button:
                 text: '('
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: ')'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: '%'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             GridLayout:
                 rows: 2
                 spacing: 1
                 
                 Button:
-                    text: 'CE'
-                    font_size: 33
+                    text: 'C'
+                    font_size: 30
                     background_normal: ''
                     background_color: .2, .24, .26, 1
                     on_press: calculator.delete(label.text)
                     
                 Button:
-                    text: 'C'
-                    font_size: 33
+                    text: 'CE'
+                    font_size: 30
                     background_normal: ''
                     background_color: .2, .24, .26, 1
                     on_press: calculator.del1(label.text)
                 
             Button:
                 text: '7'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '8'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '9'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '/'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: '4'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '5'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '6'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '*'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: '1'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '2'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '3'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '-'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: '0'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press: app.trigger = True
+                on_press:
+                    if (app.triggerClear == True): label.text = self.text
+                    else: label.text += self.text
+                    if (app.triggerClear == True): app.triggerClear = False
                 
             Button:
                 text: '.'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
                 
             Button:
                 text: '='
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: calculator.calc(label.text)
+                on_press:
+                    if (app.trigger == True): calculator.calc(label.text)
+                    if (app.trigger == True): calculator.calc(labelResult.text)
+                    if (app.trigger == True): app.triggerClear = True
                 
             Button:
                 text: '+'
-                font_size: 33
+                font_size: 35
                 background_normal: ''
                 background_color: .2, .24, .26, 1
-                on_press: label.text += self.text
+                on_press:
+                    if (app.trigger == True): label.text += self.text
+                    if (app.trigger == True): app.triggerClear = False
+                    if (app.trigger == True): app.trigger = False
