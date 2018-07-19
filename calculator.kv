@@ -59,9 +59,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: ')'
@@ -69,9 +69,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: '%'
@@ -79,9 +79,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             GridLayout:
                 rows: 2
@@ -108,9 +108,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '8'
@@ -119,9 +119,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '9'
@@ -130,9 +130,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '/'
@@ -140,9 +140,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: '4'
@@ -151,9 +151,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '5'
@@ -162,9 +162,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '6'
@@ -173,9 +173,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '*'
@@ -183,9 +183,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: '1'
@@ -194,9 +194,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '2'
@@ -205,9 +205,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '3'
@@ -216,9 +216,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '-'
@@ -226,9 +226,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: '0'
@@ -237,9 +237,9 @@
                 background_color: .2, .24, .26, 1
                 on_press: app.trigger = True
                 on_press:
-                    if (app.triggerClear == True): label.text = self.text
+                    if (app.triggerClear): label.text = self.text
                     else: label.text += self.text
-                    if (app.triggerClear == True): app.triggerClear = False
+                    if (app.triggerClear): app.triggerClear = False
                 
             Button:
                 text: '.'
@@ -247,9 +247,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
                 
             Button:
                 text: '='
@@ -257,9 +257,9 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): calculator.calc(label.text)
-                    if (app.trigger == True): calculator.calc(labelResult.text)
-                    if (app.trigger == True): app.triggerClear = True
+                    if (app.trigger): calculator.calc(label.text)
+                    if (app.trigger): calculator.calc(labelResult.text)
+                    if (app.trigger): app.triggerClear = True
                 
             Button:
                 text: '+'
@@ -267,6 +267,6 @@
                 background_normal: ''
                 background_color: .2, .24, .26, 1
                 on_press:
-                    if (app.trigger == True): label.text += self.text
-                    if (app.trigger == True): app.triggerClear = False
-                    if (app.trigger == True): app.trigger = False
+                    if (app.trigger): label.text += self.text
+                    if (app.trigger): app.triggerClear = False
+                    if (app.trigger): app.trigger = False
