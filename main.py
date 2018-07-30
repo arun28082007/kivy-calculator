@@ -11,12 +11,17 @@ class Calculator(BoxLayout):
         self.display.text = instance[:-1]
     
     def calc(self, instance):
-        self.display.text = str(eval(instance))
-        self.result.text = str(eval(instance))
+        try:
+            self.display.text = str(eval(instance))
+            self.result.text = str(eval(instance))
+        except Exception:
+            self.display.text = '0'
+            self.result.text = 'ERROR'
         
 class CalculatorApp(App):
     trigger = False
-    triggerClear = False
+    triggerC = False
+    triggerD = False
     
     def build(self):
         return Calculator()
